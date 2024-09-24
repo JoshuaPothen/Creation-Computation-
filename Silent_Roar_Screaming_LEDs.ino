@@ -42,7 +42,10 @@ void loop() {
   // read light sensor pin and store value in a variable:
   sensorValue = analogRead(sensorPin);
   sensorValue2 = analogRead(sensorPin2)-500; //CALIBERATED BASED ON NEED(Soft Calibration)
+ 
+ //Creates a combined output value for both sensor inputs
   CombSensorValue = (sensorValue + sensorValue2);
+ 
   //prints sensor input data on the serial monitor
   Serial.print("Sensor Value: ");
   Serial.print(sensorValue);
